@@ -15,7 +15,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const res = await axios.get("http://localhost:4000/users?email=${user.email}");
-      if (res.data.length > 0) {
+      if (res.data.length > 0) { 
         alert("User already exists!");
       } else {
         await axios.post("http://localhost:4000/users", user);
